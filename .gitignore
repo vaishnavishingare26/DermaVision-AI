@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# AI datasets
+ai_model/database/HAM1000/
+ai_model/dataset/
+ai_model/preprocessed/
+
+# Trained model weights
+ai_model/models/*.pth
+ai_model/models/*.pt
+ai_model/models/*.ckpt
+ai_model/saved_models/*.pth
+ai_model/saved_models/*.pt
+ai_model/saved_models/*.keras
+
+# Generated/runtime files
+uploads/
+reports/generated/
+*.log
+
+# ZIP backups
+*.zip
+# AI datasets / image data
+ai_model/database/HAM1000/
+ai_model/dataset/
+ai_model/preprocessed/
+ai_model/preprocessing/HAM1000/
