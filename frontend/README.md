@@ -1,26 +1,34 @@
-# DermaVision AI Frontend - Improved
+# DermaVision AI Frontend — Corrected
+
+## Features
+- Live connection to Flask `POST /api/predict`
+- No hardcoded Melanoma/94.72% prediction
+- English, Hindi and Marathi UI language support
+- New Patient / Existing Patient workflow
+- Automatic unique Patient ID such as `DV-P-00001`
+- Existing Patient ID lookup
+- Patient profile + prediction history persisted in browser localStorage
+- Actual backend confidence, risk and class probabilities shown on the result page
+- Printable report with Patient ID
 
 ## Run
-```bash
-npm install
-npm run dev
-```
+1. Start Flask from the project root:
+   `python -m backend.app`
+2. Open a second terminal and enter the frontend folder:
+   `cd frontend`
+3. Install dependencies:
+   `npm install`
+4. Start Vite:
+   `npm run dev`
+5. Open the URL shown by Vite, normally `http://localhost:5173`
 
-## What is included
-- Premium medical AI login
-- Dashboard
-- Patient metadata form
-- Actual image upload + preview + validation
-- Prediction result screen
-- Segmentation/Grad-CAM placeholders ready for backend outputs
-- Patient history
-- Analytics
-- Clinical-style report + print/PDF
-- Responsive UI
-- Flask API integration point documented for later backend connection
+The frontend defaults to:
+`http://127.0.0.1:5000/api`
 
-## Backend contract planned
-`POST http://localhost:5000/api/predict` with multipart form data:
-`image` + patient metadata.
+To change it, create `.env` from `.env.example` and set:
+`VITE_API_BASE_URL=http://127.0.0.1:5000/api`
 
-The current prediction is intentionally demo data until the trained model is connected; the UI does not pretend that the demo score is a real model result.
+## Important
+The current patient storage is browser-local for this frontend-only integration. For a multi-user production deployment, connect the patient records to a server-side database/API so records are shared across users/devices.
+
+The AI result is research decision support and is not a medical diagnosis.
