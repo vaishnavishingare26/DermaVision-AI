@@ -1,28 +1,40 @@
-# DermaVision AI
+# 🧬 DermaVision AI
 
-Explainable AI-based skin lesion analysis project.
+### Explainable AI-Based Skin Lesion Analysis
 
-## Structure
+DermaVision AI is an explainable AI system designed for skin lesion
+analysis using deep learning, image preprocessing, segmentation,
+classification, metadata fusion, and Grad-CAM visualization.
 
-- `frontend/` — React + Vite application
-- `backend/` — Flask API
-- `ai_model/` — dataset, preprocessing, classification, segmentation, metadata fusion and Grad-CAM
-- `reports/` — generated reports/templates
-- `database/` — database schema
+## ✨ Features
 
-## Frontend
+- 🧠 AI-based skin lesion classification
+- 🔬 Image preprocessing and segmentation
+- 🔍 Grad-CAM based explainability
+- 📊 Metadata integration
+- 🌐 React + Vite frontend
+- ⚡ Flask backend API
+- 📄 Report generation
 
-```powershell
-cd frontend
-npm install
-npm run dev
-```
+## 🏗️ Architecture
 
-## Backend
+Frontend → Flask API → AI Model → Prediction + Grad-CAM → Result
 
-```powershell
-cd backend
-python app.py
-```
+## 🛠️ Tech Stack
 
-Do not place HAM10000 or ISIC 2024 datasets inside the frontend. Keep them under `ai_model/dataset/`.
+### AI / Machine Learning
+- Python
+- Deep Learning
+- Computer Vision
+- Image Segmentation
+- Grad-CAM
+
+### Backend
+- Python
+- Flask
+
+### Frontend
+- React
+- Vite
+- JavaScript
+
